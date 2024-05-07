@@ -1,3 +1,3 @@
 module.exports = {
-  Person: require('./Park')
+  Park: require('./Park')
 }
