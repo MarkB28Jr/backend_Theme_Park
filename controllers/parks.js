@@ -1,5 +1,5 @@
 const express = require('express')
-const {Park} = require('../models')
+const { Park } = require('../models')
 
 const index = async (req, res, next) => {
     try {
@@ -20,16 +20,16 @@ const create = async (req, res, next) => {
 const show = async (req, res, next) => {
     try {
         res.json(await Park.findById(req.params.id));
-      } catch (error) {
+    } catch (error) {
         //send error
         res.status(400).json(error);
-      }
+    }
 };
 
 const destroy = async (req, res, next) => {
     try {
         res.json(await Park.findByIdAndDelete(req.params.id))
-    }catch (error) {
+    } catch (error) {
         res.status(400).json(error)
 
     }
@@ -37,12 +37,12 @@ const destroy = async (req, res, next) => {
 
 const update = async (req, res, next) => {
     try {
-        res.json(await Park.findByIdAndUpdate(req.params.id, req.body, {new:true})
-    );
-} catch (error) {
-    //send error
-    res.status(400).json(error);
-}
+        res.json(await Park.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        );
+    } catch (error) {
+        //send error
+        res.status(400).json(error);
+    }
 };
 
 module.exports = {
