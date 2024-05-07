@@ -8,7 +8,7 @@ const cors = require('cors')
 const morgan = require('morgan')
 
 
-const parkRouter = require('.routes/parks')
+const parkRouter = require('./routes/parks')
 
 
 
