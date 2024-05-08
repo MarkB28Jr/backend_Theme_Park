@@ -10,9 +10,7 @@ const parkRouter = require('./routes/parks')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use(cors({
-  origin:"*"
-}))
+app.use(cors())
 app.use(morgan('dev'))
 app.use('/park', parkRouter)
 
