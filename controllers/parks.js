@@ -21,6 +21,7 @@ const show = async (req, res, next) => {
     try {
         res.json(await Park.findById(req.params.id));
     } catch (error) {
+        //send error
         res.status(400).json(error);
     }
 };
