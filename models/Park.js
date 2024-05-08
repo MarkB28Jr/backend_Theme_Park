@@ -11,4 +11,4 @@ const ParkSchema = new Schema({
     food: String,
 }, { timestamps: true });
 
-module.exports = mongoose.model("Park", ParkSchema);
+module.exports = mongoose.model("Park", ParkSchema)
